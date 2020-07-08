@@ -8,7 +8,10 @@ If you would like to contact me my business email is matthewtgm100@gmail.com and
 
 ## FAQ
 Q: May I use your code in my own bot?
+
 A: Yes!
 
+
 Q: When will a new update come out?
+
 A: Every time there is a new feature added tp Hypixel-API-Reborn
