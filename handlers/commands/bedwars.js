@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const colors = require('../../bot/colors.json');
+const { api_key } = require('../../bot/config.json');
 const HypixelAPIReborn = require('hypixel-api-reborn');
-const Hypixel = require('hypixel');
 
-const hypixelAPIReborn = new HypixelAPIReborn.Client('ff3f90cb-e6d5-4ab8-a01e-86b46c97fb97');
+const hypixelAPIReborn = new HypixelAPIReborn.Client(api_key);
 
 module.exports = {
     name: 'bedwars',
@@ -29,7 +29,6 @@ module.exports = {
                 .addField('Total Wins:', player.stats.bedwars.wins)
 
             message.channel.send(embed);
-
 
         })
 

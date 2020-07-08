@@ -23,7 +23,7 @@ for (const file of commandFiles) {
 fs.readdir('./handlers/events', (err, files) => {
     if (err) return console.error(err);
     files.forEach(file => {
-        const eventFunction = require(`./events/${file}`);
+        const eventFunction = require(`./handlers/events/${file}`);
         if (eventFunction.disabled) return;
 
         const event = eventFunction.event || file.split('.')[0];
@@ -38,10 +38,6 @@ fs.readdir('./handlers/events', (err, files) => {
     });
 });
 //EVENT + COMMAND HANDLER
-
-client.on('ready', () => {
-    console.log('Hello!');
-})
 
 client.on("message", async message => {
 
