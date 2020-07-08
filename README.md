@@ -7,11 +7,9 @@ I am an every day YouTuber and player on the Hypixel Network as well as other Mi
 If you would like to contact me my business email is matthewtgm100@gmail.com and my Discord tag is MatthewTGM#4058
 
 ## FAQ
-Q: May I use your code in my own bot?
+> Q: May I use your code in my own bot?
+> A: Yes!
 
-A: Yes!
 
-
-Q: When will a new update come out?
-
-A: Every time there is a new feature added tp Hypixel-API-Reborn
+> Q: When will a new update come out?
+> A: Every time there is a new feature added tp Hypixel-API-Reborn
