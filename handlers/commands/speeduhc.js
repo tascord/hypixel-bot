@@ -3,7 +3,7 @@ const colors = require('../../bot/colors.json');
 const HypixelAPIReborn = require('hypixel-api-reborn');
 const Hypixel = require('hypixel');
 
-const hypixelAPIReborn = new HypixelAPIReborn.Client('ff3f90cb-e6d5-4ab8-a01e-86b46c97fb97');
+const hypixelAPIReborn = new HypixelAPIReborn.Client('API-KEY');
 
 module.exports = {
     name: 'speeduhc',
