@@ -1,6 +1,6 @@
 # Hypixel Bot
 ## What It Is
-Hypixel Bot is a bot made to track statistics for the Minecraft server Hypixel. It uses the npm library, "Hypixel-API-Reborn", by StatsZDev
+Hypixel Bot is a bot made to track statistics for the Minecraft server Hypixel. It uses the npm library, "Hypixel-API-Reborn", by StavZDev
 
 ## About The Dev
 I am an every day YouTuber and player on the Hypixel Network as well as other Minecraft servers. I specialize in JavaScript and Java.
