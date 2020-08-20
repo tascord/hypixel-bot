@@ -7,6 +7,7 @@ const hypixelAPIReborn = new HypixelAPIReborn.Client(api_key);
 
 module.exports = {
     name: 'watchdog',
+    aliases: ['wdr'],
     async execute(message, args, client) {
 
         hypixelAPIReborn.getWatchdogStats().then(async (stats) => {
@@ -14,9 +15,14 @@ module.exports = {
             const watchdogStatsEmbed = new Discord.MessageEmbed()
                 .setTitle('Watchdog Stats')
                 .setColor(colors.mainColor)
-                .addField('Total Watchdog bans:', stats.ByWatchdogTotal)
-                .addField('Bans in the last minute:', stats.ByWatchDogLastMinute)
-                .addField('Total staff bans', stats.ByStaffTotal)
+                .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                    format: 'png',
+                    dynamic: true,
+                    size: 2048
+                }))
+                .addField('Total Watchdog bans:', stats.ByWatchdogTotal, true)
+                .addField('Bans in the last minute:', stats.ByWatchDogLastMinute, true)
+                .addField('Total staff bans', stats.ByStaffTotal, true)
 
             message.channel.send(watchdogStatsEmbed);
 

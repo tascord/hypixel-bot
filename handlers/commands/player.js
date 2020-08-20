@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const colors = require('../../bot/colors.json');
-const { api_key } = require('../../bot/config.json');
+const {
+    api_key
+} = require('../../bot/config.json');
 const HypixelAPIReborn = require('hypixel-api-reborn');
 
 const hypixelAPIReborn = new HypixelAPIReborn.Client(api_key);
@@ -34,24 +36,22 @@ module.exports = {
 
             playerRank = "";
 
-            if(player.rank == 'Default') {
+            if (player.rank == 'Default') {
                 playerRank = "None";
             }
 
-            if(player.rank != 'Default') {
+            if (player.rank != 'Default') {
                 playerRank = player.rank;
             }
 
             const playerInfoEmbed = new Discord.MessageEmbed()
                 .setTitle(`Stats of [${player.rank}] ${player.nickname}`)
                 .setColor(colors.mainColor)
-                .addField('Rank:', playerRank)
-                .addField('Level:', player.level)
-                //.addField('First Login:', player.firstLogin.toExponential())
-                //.addField('Last Login:', player.lastLogin.toPrecision())
-                .addField('Karma:', player.karma)
-                .addField('Main MC Version:', playerMinecraftVersion)
-                .setFooter(`this player is ${playerIsOnline} | ${message.author.tag}`, message.author.displayAvatarURL({
+                .addField('Rank:', playerRank, true)
+                .addField('Level:', player.level, true)
+                .addField('Karma:', player.karma, true)
+                .addField('Main MC Version:', playerMinecraftVersion, true)
+                .setFooter(`this player is ${playerIsOnline} | ${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
                     format: 'png',
                     dynamic: true,
                     size: 2048

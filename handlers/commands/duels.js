@@ -17,6 +17,12 @@ module.exports = {
                 .setTitle(`Help for Duels command`)
                 .setColor(colors.mainColor)
                 .addField('Sub Commands:', 'uhc\nskywars\nbridge\nsumo\nop\ncombo')
+                .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                format: 'png',
+                dynamic: true,
+                size: 2048
+            }))
+            .setImage('https://hypixel.net/styles/hypixel-v2/images/game-icons/Duels-64.png')
 
             message.channel.send(embed);
 
@@ -29,12 +35,17 @@ module.exports = {
                 if(!player) return message.channel.send('That player doesn\'t exist!');
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(`UHC Duels stats of ${player.nickname}`)
+                    .setTitle(`UHC Duels stats of [${player.rank}] ${player.nickname}`)
                     .setColor(colors.mainColor)
                     .addField('Kills:', player.stats.duels.uhc.v1.kills)
                     .addField('Losses:', player.stats.duels.uhc.v1.losses)
                     .addField('Deaths:', player.stats.duels.uhc.v1.deaths)
                     .addField('Wins:', player.stats.duels.uhc.v1.wins)
+                    .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                        format: 'png',
+                        dynamic: true,
+                        size: 2048
+                    }))
 
                 message.channel.send(embed);
 
@@ -49,12 +60,17 @@ module.exports = {
                 if(!player) return message.channel.send('That player doesn\'t exist!');
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(`SkyWars Duels stats of ${player.nickname}`)
+                    .setTitle(`SkyWars Duels stats of [${player.rank}] ${player.nickname}`)
                     .setColor(colors.mainColor)
                     .addField('Kills:', player.stats.duels.skywars.v1.kills)
                     .addField('Losses:', player.stats.duels.skywars.v1.losses)
                     .addField('Deaths:', player.stats.duels.skywars.v1.deaths)
                     .addField('Wins:', player.stats.duels.skywars.v1.wins)
+                    .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                        format: 'png',
+                        dynamic: true,
+                        size: 2048
+                    }))
 
                 message.channel.send(embed);
 
@@ -69,12 +85,17 @@ module.exports = {
                 if(!player) return message.channel.send('That player doesn\'t exist!');
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(`Bridge Duels stats of ${player.nickname}`)
+                    .setTitle(`Bridge Duels stats of [${player.rank}] ${player.nickname}`)
                     .setColor(colors.mainColor)
                     .addField('Kills:', player.stats.duels.bridge.v1.kills)
                     .addField('Losses:', player.stats.duels.bridge.v1.losses)
                     .addField('Deaths:', player.stats.duels.bridge.v1.deaths)
                     .addField('Wins:', player.stats.duels.bridge.v1.wins)
+                    .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                        format: 'png',
+                        dynamic: true,
+                        size: 2048
+                    }))
 
                 message.channel.send(embed);
 
@@ -89,12 +110,17 @@ module.exports = {
                 if(!player) return message.channel.send('That player doesn\'t exist!');
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(`Sumo Duels stats of ${player.nickname}`)
+                    .setTitle(`Sumo Duels stats of [${player.rank}] ${player.nickname}`)
                     .setColor(colors.mainColor)
                     .addField('Kills:', player.stats.duels.sumo.kills)
                     .addField('Losses:', player.stats.duels.sumo.losses)
                     .addField('Deaths:', player.stats.duels.sumo.deaths)
                     .addField('Wins:', player.stats.duels.sumo.wins)
+                    .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                        format: 'png',
+                        dynamic: true,
+                        size: 2048
+                    }))
 
                 message.channel.send(embed);
 
@@ -109,12 +135,17 @@ module.exports = {
                 if(!player) return message.channel.send('That player doesn\'t exist!');
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(`OP Duels stats of ${player.nickname}`)
+                    .setTitle(`OP Duels stats of [${player.rank}] ${player.nickname}`)
                     .setColor(colors.mainColor)
                     .addField('Kills:', player.stats.duels.op.v1.kills)
                     .addField('Losses:', player.stats.duels.op.v1.losses)
                     .addField('Deaths:', player.stats.duels.op.v1.deaths)
                     .addField('Wins:', player.stats.duels.op.v1.wins)
+                    .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                        format: 'png',
+                        dynamic: true,
+                        size: 2048
+                    }))
 
                 message.channel.send(embed);
 
@@ -129,12 +160,17 @@ module.exports = {
                 if(!player) return message.channel.send('That player doesn\'t exist!');
 
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(`Combo Duels stats of ${player.nickname}`)
+                    .setTitle(`Combo Duels stats of [${player.rank}] ${player.nickname}`)
                     .setColor(colors.mainColor)
-                    .addField('Kills:', player.stats.duels.combo.kills)
-                    .addField('Losses:', player.stats.duels.combo.losses)
-                    .addField('Deaths:', player.stats.duels.combo.deaths)
-                    .addField('Wins:', player.stats.duels.combo.wins)
+                    .addField('Kills:', player.stats.duels.combo.kills, true)
+                    .addField('Losses:', player.stats.duels.combo.losses, true)
+                    .addField('Deaths:', player.stats.duels.combo.deaths, true)
+                    .addField('Wins:', player.stats.duels.combo.wins, true)
+                    .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                        format: 'png',
+                        dynamic: true,
+                        size: 2048
+                    }))
 
                 message.channel.send(embed);
 

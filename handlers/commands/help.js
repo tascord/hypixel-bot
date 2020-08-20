@@ -21,7 +21,7 @@ module.exports = {
             .setColor(colors.mainColor)
             .setDescription(`My Commands\nDon\'t forget that the prefix is \'${prefix}\'`)
             .addField("Commands", commands.filter(e => !e.modOnly).filter(e => !e.hiddenCommand).map(command => command.name).join('\n'))
-            .setFooter(message.author.tag, message.author.displayAvatarURL({
+            .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
                 format: 'png',
                 dynamic: true,
                 size: 2048

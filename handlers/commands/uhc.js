@@ -14,12 +14,18 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
                 .setTitle(`UHC stats for [${player.rank}] ${player.nickname}`)
                 .setColor(colors.mainColor)
-                .addField('Kills:', player.stats.uhc.kills)
-                .addField('Level:', player.stats.uhc.starLevel)
-                .addField('Wins:', player.stats.uhc.wins)
-                .addField('Heads Eaten:', player.stats.uhc.headsEaten)
-                .addField('Deaths', player.stats.uhc.deaths)
-                .addField('Coins:', player.stats.uhc.coins)
+                .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                    format: 'png',
+                    dynamic: true,
+                    size: 2048
+                }))
+                .setImage('https://hypixel.net/styles/hypixel-v2/images/game-icons/UHC-64.png')
+                .addField('Kills:', player.stats.uhc.kills, true)
+                .addField('Level:', player.stats.uhc.starLevel, true)
+                .addField('Wins:', player.stats.uhc.wins, true)
+                .addField('Heads Eaten:', player.stats.uhc.headsEaten, true)
+                .addField('Deaths', player.stats.uhc.deaths, true)
+                .addField('Coins:', player.stats.uhc.coins, true)
 
             message.channel.send(embed);
 

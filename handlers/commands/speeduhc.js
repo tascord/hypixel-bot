@@ -14,14 +14,20 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
                 .setTitle(`SpeedUHC stats for [${player.rank}] ${player.nickname}`)
                 .setColor(colors.mainColor)
-                .addField('Kills:', player.stats.speedUHC.kills)
-                .addField('Losses:', player.stats.speedUHC.losses)
-                .addField('Wins:', player.stats.speedUHC.wins)
-                .addField('Winstreak:', player.stats.speedUHC.winstreak)
-                .addField('Deaths:', player.stats.speedUHC.deaths)
-                .addField('Games Played:', player.stats.speedUHC.playedGames)
-                .addField('KD Ratio:', player.stats.speedUHC.KDRatio)
-                .addField('WL Ratio:', player.stats.speedUHC.WLRatio)
+                .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
+                    format: 'png',
+                    dynamic: true,
+                    size: 2048
+                }))
+                .setImage('https://hypixel.net/styles/hypixel-v2/images/game-icons/SpeedUHC-64.png')
+                .addField('Kills:', player.stats.speedUHC.kills, true)
+                .addField('Losses:', player.stats.speedUHC.losses, true)
+                .addField('Wins:', player.stats.speedUHC.wins, true)
+                .addField('Winstreak:', player.stats.speedUHC.winstreak, true)
+                .addField('Deaths:', player.stats.speedUHC.deaths, true)
+                .addField('Games Played:', player.stats.speedUHC.playedGames, true)
+                .addField('KD Ratio:', player.stats.speedUHC.KDRatio, true)
+                .addField('WL Ratio:', player.stats.speedUHC.WLRatio, true)
 
             message.channel.send(embed);
 
