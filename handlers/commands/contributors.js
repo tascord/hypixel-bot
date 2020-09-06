@@ -10,7 +10,7 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed()
             .setTitle('❤ Contributors ❤')
-            .setColor(colors["mainColor"])
+            .setColor(colors['MainColor'])
             .setDescription(contribs.join('\n'))
 
         message.channel.send(embed);

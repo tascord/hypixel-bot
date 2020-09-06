@@ -14,7 +14,7 @@ module.exports = {
 
             const watchdogStatsEmbed = new Discord.MessageEmbed()
                 .setTitle('Watchdog Stats')
-                .setColor(colors.mainColor)
+                .setColor(colors['MainColor'])
                 .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
                     format: 'png',
                     dynamic: true,

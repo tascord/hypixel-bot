@@ -18,7 +18,7 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed()
             .setTitle(`${server.name} Help`)
-            .setColor(colors.mainColor)
+            .setColor(colors['MainColor'])
             .setDescription(`My Commands\nDon\'t forget that the prefix is \'${prefix}\'`)
             .addField("Commands", commands.filter(e => !e.modOnly).filter(e => !e.hiddenCommand).map(command => command.name).join('\n'))
             .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({

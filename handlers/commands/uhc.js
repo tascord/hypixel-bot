@@ -13,7 +13,7 @@ module.exports = {
 
             const embed = new Discord.MessageEmbed()
                 .setTitle(`UHC stats for [${player.rank}] ${player.nickname}`)
-                .setColor(colors.mainColor)
+                .setColor(colors['MainColor'])
                 .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
                     format: 'png',
                     dynamic: true,

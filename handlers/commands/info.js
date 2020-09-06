@@ -7,11 +7,11 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed()
             .setTitle('✨ Information ✨')
-            .setColor(colors.mainColor)
+            .setColor(colors['MainColor'])
             .setImage(client.user.displayAvatarURL({ format: 'png', size: 2048, dynamic: true }))
             .addField('Username:', client.user.tag, true)
             .addField('Guild Size:', client.guilds.cache.size, true)
-            .addField('User Count:', client.users.cache.size, true)
+            .addField('User Count:', `${client.users.cache.filter(m => !m.bot).size}`, true)
 
         message.channel.send(embed);
 

@@ -16,7 +16,7 @@ module.exports = {
 
             let embed = new Discord.MessageEmbed()
                 .setTitle(`[${player.rank}] ${player.nickname}'s Social Media`)
-                .setColor(colors.mainColor)
+                .setColor(colors['MainColor'])
                 .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
                     format: 'png',
                     dynamic: true,

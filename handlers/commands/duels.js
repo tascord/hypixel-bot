@@ -15,7 +15,7 @@ module.exports = {
 
             const embed = new Discord.MessageEmbed()
                 .setTitle(`Help for Duels command`)
-                .setColor(colors.mainColor)
+                .setColor(colors['MainColor'])
                 .addField('Sub Commands:', 'uhc\nskywars\nbridge\nsumo\nop\ncombo')
                 .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
                 format: 'png',
@@ -36,7 +36,7 @@ module.exports = {
 
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`UHC Duels stats of [${player.rank}] ${player.nickname}`)
-                    .setColor(colors.mainColor)
+                    .setColor(colors['MainColor'])
                     .addField('Kills:', player.stats.duels.uhc.v1.kills)
                     .addField('Losses:', player.stats.duels.uhc.v1.losses)
                     .addField('Deaths:', player.stats.duels.uhc.v1.deaths)
@@ -53,7 +53,7 @@ module.exports = {
 
         }
 
-        if (args[0] == 'skywars') {
+        if (args[0] == 'skywars' || args[0] == 'sw') {
 
             hypixelAPIReborn.getPlayer(args[1]).then((player) => {
 
@@ -61,7 +61,7 @@ module.exports = {
 
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`SkyWars Duels stats of [${player.rank}] ${player.nickname}`)
-                    .setColor(colors.mainColor)
+                    .setColor(colors['MainColor'])
                     .addField('Kills:', player.stats.duels.skywars.v1.kills)
                     .addField('Losses:', player.stats.duels.skywars.v1.losses)
                     .addField('Deaths:', player.stats.duels.skywars.v1.deaths)
@@ -86,7 +86,7 @@ module.exports = {
 
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`Bridge Duels stats of [${player.rank}] ${player.nickname}`)
-                    .setColor(colors.mainColor)
+                    .setColor(colors['MainColor'])
                     .addField('Kills:', player.stats.duels.bridge.v1.kills)
                     .addField('Losses:', player.stats.duels.bridge.v1.losses)
                     .addField('Deaths:', player.stats.duels.bridge.v1.deaths)
@@ -111,7 +111,7 @@ module.exports = {
 
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`Sumo Duels stats of [${player.rank}] ${player.nickname}`)
-                    .setColor(colors.mainColor)
+                    .setColor(colors['MainColor'])
                     .addField('Kills:', player.stats.duels.sumo.kills)
                     .addField('Losses:', player.stats.duels.sumo.losses)
                     .addField('Deaths:', player.stats.duels.sumo.deaths)
@@ -136,7 +136,7 @@ module.exports = {
 
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`OP Duels stats of [${player.rank}] ${player.nickname}`)
-                    .setColor(colors.mainColor)
+                    .setColor(colors['MainColor'])
                     .addField('Kills:', player.stats.duels.op.v1.kills)
                     .addField('Losses:', player.stats.duels.op.v1.losses)
                     .addField('Deaths:', player.stats.duels.op.v1.deaths)
@@ -161,7 +161,7 @@ module.exports = {
 
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`Combo Duels stats of [${player.rank}] ${player.nickname}`)
-                    .setColor(colors.mainColor)
+                    .setColor(colors['MainColor'])
                     .addField('Kills:', player.stats.duels.combo.kills, true)
                     .addField('Losses:', player.stats.duels.combo.losses, true)
                     .addField('Deaths:', player.stats.duels.combo.deaths, true)

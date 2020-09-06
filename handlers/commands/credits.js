@@ -6,8 +6,8 @@ module.exports = {
     async execute(message, args, client) {
 
         const embed = new Discord.MessageEmbed()
-            .setTitle('MatthewTGM\'s Hypixel Bot credits')
-            .setColor(colors.mainColor)
+            .setTitle('Hypixel Bot credits')
+            .setColor(colors['MainColor'])
             .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
                 format: 'png',
                 dynamic: true,

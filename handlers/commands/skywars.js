@@ -14,7 +14,7 @@ module.exports = {
 
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`SkyWars stats of [${player.rank}] ${player.nickname}`)
-                    .setColor(colors.mainColor)
+                    .setColor(colors['MainColor'])
                     .setFooter(`${message.author.tag} | Created by AnikoDev`, message.author.displayAvatarURL({
                         format: 'png',
                         dynamic: true,

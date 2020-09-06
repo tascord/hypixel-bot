@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const colors = require('../bot/colors.json')
+const colors = require('../../bot/colors.json')
 module.exports = {
     name: 'addrole',
     hiddenCommand: true,

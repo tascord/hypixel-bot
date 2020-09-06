@@ -11,8 +11,12 @@ const {
 module.exports = {
     name: 'skyblock',
     aliases: ['sb'],
-    notReady: true,
+    notReady: false,
     async execute(message, args, client) {
+
+        if(!args.length) {
+            message.reply('specify a player')
+        }
 
         if (args[0]) {
 
@@ -74,24 +78,16 @@ module.exports = {
 
                                         try {
 
-                                            let armor = nbt.simplify(dat).i;
+                                            let nbtData = nbt.simplify(dat).i;
 
                                             const embed = new Discord.MessageEmbed()
                                                 .setTitle('✨ Hypixel Skyblock ✨')
-                                                .setColor(colors.mainColor)
+                                                .setColor(colors['MainColor'])
                                                 .addField('Profile Name', profiles[0].cute_name)
-                                            if (armor[3].tag != null || armor[3].tag != undefined) {
-                                                embed.addField('Helmet', armor[3].tag.ExtraAttributes.id)
+                                            for(length in nbtData) {
+                                                embed.addField(nbtData[length].ExtraAttributes.id, nbtData[length].ExtraAttributes.name)
                                             }
-                                            if (armor[2].tag != null | armor[2].tag != undefined) {
-                                                embed.addField('Chestplate', armor[2].tag.ExtraAttributes.id)
-                                            }
-                                            if (armor[1].tag != null || armor[1].tag != undefined) {
-                                                embed.addField('Leggings', armor[1].tag.ExtraAttributes.id)
-                                            }
-                                            if (armor[0].tag != null || armor[0].tag != undefined) {
-                                                embed.addField('Boots', armor[0].tag.ExtraAttributes.id)
-                                            }
+                                            console.log(length)
 
                                             message.channel.send(embed)
                                                 .then(msg => {
