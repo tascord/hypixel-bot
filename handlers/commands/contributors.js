@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['contribs'],
     async execute(message, args, client) {
 
-        let contribs = ['MatthewTGM#4058', 'StavZDev#3264']
+        let contribs = ['MatthewTGM#4058', 'StavZDev#3264', 'Nebula#0001']
 
         const embed = new Discord.MessageEmbed()
             .setTitle('❤ Contributors ❤')

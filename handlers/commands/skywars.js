@@ -7,7 +7,7 @@ const hypixelAPIReborn = new HypixelAPIReborn.Client(api_key);
 
 module.exports = {
     name: 'skywars',
-    asliases: ['sw'],
+    aliases: ['sw'],
     async execute(message, args, client) {
 
             hypixelAPIReborn.getPlayer(args[0]).then(async (player) => {

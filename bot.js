@@ -10,6 +10,8 @@ const {
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
+client.debugmode = false;
+
 //EVENT + COMMAND HANDLER
 const commandFiles = fs.readdirSync('./handlers/commands').filter(file => file.endsWith('.js'));
 
@@ -48,17 +50,38 @@ client.on("ready", async () => {
 
     console.log(`${client.user.username}: ` + 'now online | version: ' + version);
 
-    let statuses = [
-        "hypixel.net",
-        "h!help",
-        `stats of players in ${client.guilds.cache.size} guilds!`,
-        `stats of ${client.users.cache.size} players!`
-    ]
+    let statuses = {
+        "0": {
+            "status": "on hypixel.net",
+            "type": "PLAYING"
+        },
+        "1": {
+            "status": "for h!help",
+            "type": "WATCHING"
+        },
+        "2": {
+            "status": "for h!suggest",
+            "type": "WATCHING"
+        },
+        "3": {
+            "status": "now verified!",
+            "type": "WATCHING"
+        },
+        "4": {
+            "status": `NOW IN ${client.users.cache.filter(m => !m.bot).size} SERVERS!`,
+            "type": "PLAYING"
+        },
+    }
 
     setInterval(function () {
-        let status = statuses[Math.floor(Math.random() * statuses.length)]
+        let status = statuses[Math.floor(Math.random() * Object.keys(statuses).length)].status
+        let type = statuses[Math.floor(Math.random() * Object.keys(statuses).length)].type
+        if(client.debugmode) {
+            let channel = client.guilds.cache.find(g => g.id == 733546808768462908).channels.cache.find(c => c.id == 758784929935917097);
+            channel.send(`Status: ${status}\nType: ${type}`);
+        }
         client.user.setActivity(status, {
-            type: 'WATCHING',
+            type: type,
         });
     }, 6000)
 
@@ -91,14 +114,11 @@ client.on("message", async message => {
                 size: 2048
             }))
 
-        message.channel.send(embed)
-
+        return message.channel.send(embed)
     }
 
     try {
-        if (!command.notReady) {
-            command.execute(message, args, client);
-        }
+        command.execute(message, args, client);
     } catch (error) {
         console.error(error);
         message.reply('there was an error trying to execute that command!');
