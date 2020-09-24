@@ -74,8 +74,9 @@ client.on("ready", async () => {
     }
 
     setInterval(function () {
-        let status = statuses[Math.floor(Math.random() * Object.keys(statuses).length)].status
-        let type = statuses[Math.floor(Math.random() * Object.keys(statuses).length)].type
+		let time = Math.floor(Math.random() * Object.keys(statuses).length)
+        let status = statuses[time].status
+        let type = statuses[time].type
         if(client.debugmode) {
             let channel = client.guilds.cache.find(g => g.id == 733546808768462908).channels.cache.find(c => c.id == 758784929935917097);
             channel.send(`Status: ${status}\nType: ${type}`);
