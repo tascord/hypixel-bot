@@ -68,7 +68,7 @@ client.on("ready", async () => {
             "type": "WATCHING"
         },
         "4": {
-            "status": `NOW IN ${client.users.cache.filter(m => !m.bot).size} SERVERS!`,
+            "status": `NOW IN ${client.guilds.cache.size} SERVERS!`,
             "type": "PLAYING"
         },
     }
