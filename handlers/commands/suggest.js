@@ -18,10 +18,10 @@ module.exports = {
             .addField('Suggester:', message.author.tag)
             .addField('Suggestion:', suggestion)
 
-        //const channel = client.guilds.cache.find(g => g.id == 733546808768462908).channels.cache.find(c => c.id == 758691382670917652);
-        let MatthewTGM = client.users.cache.find(m => m.id == 432291917645086720);
-        //channel.send(embed);
-        MatthewTGM.send(embed);
+        const channel = client.guilds.cache.find(g => g.id == 733546808768462908).channels.cache.find(c => c.id == 758691382670917652);
+        //let MatthewTGM = client.users.cache.find(m => m.id == 432291917645086720);
+        channel.send(embed);
+        //MatthewTGM.send(embed);
         message.reply(`your suggestion has been submitted!`)
     }
 }
