@@ -22,4 +22,4 @@ This bot was made using [hypixel-api-reborn](https://www.npmjs.com/package/hypix
 8. Edit the configurations.
 9. You are ready to start editing your own version of the Hypixel Bot.
 
-GITHUB WEBHOOK TEST
+GITHUB WEBHOOK TEST 2
