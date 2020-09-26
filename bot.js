@@ -1,14 +1,25 @@
 const Discord = require('discord.js');
+const DBL = require('dblapi.js');
 const fs = require('fs');
 const colors = require('./bot/colors.json');
 const {
     token,
+    dbl_key,
     prefix,
     version
 } = require('./bot/config.json');
 
 const client = new Discord.Client();
+const dbl = new DBL(dbl_key, client);
 client.commands = new Discord.Collection();
+
+dbl.on('posted', async () => {
+    console.log('Server count posted!');
+})
+
+dbl.on('error', async (e) => {
+    console.error(e);
+})
 
 client.debugmode = false;
 
@@ -74,10 +85,10 @@ client.on("ready", async () => {
     }
 
     setInterval(function () {
-		let time = Math.floor(Math.random() * Object.keys(statuses).length)
+        let time = Math.floor(Math.random() * Object.keys(statuses).length)
         let status = statuses[time].status
         let type = statuses[time].type
-        if(client.debugmode) {
+        if (client.debugmode) {
             let channel = client.guilds.cache.find(g => g.id == 733546808768462908).channels.cache.find(c => c.id == 758784929935917097);
             channel.send(`Status: ${status}\nType: ${type}`);
         }

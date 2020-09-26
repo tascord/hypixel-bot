@@ -1,6 +1,7 @@
 {
     "token": "YOUR BOT TOKEN",
     "api_key": "YOUR API KEY",
+    "dbl_key": "YOUR DISCORD BOT LIST KEY",
     "version": "1.1.6",
     "prefix": "h!"
 }
