@@ -75,11 +75,15 @@ client.on("ready", async () => {
             "type": "WATCHING"
         },
         "3": {
-            "status": "now verified!",
+            "status": "the verification mark!",
             "type": "WATCHING"
         },
         "4": {
-            "status": `NOW IN ${client.guilds.cache.size} SERVERS!`,
+            "status": `over ${client.guilds.cache.size} servers!`,
+            "type": "WATCHING"
+        },
+        "5": {
+            "status": "Duels on hypixel.net",
             "type": "PLAYING"
         },
     }
