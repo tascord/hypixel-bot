@@ -74,7 +74,7 @@ module.exports = {
             }
 
             message.channel.send(playerInfoEmbed);
-        })
+        }).catch(e => {message.channel.send('I could not find that player in the API. Check spelling and name history.')});
 
     }
 }

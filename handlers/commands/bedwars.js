@@ -50,7 +50,7 @@ module.exports = {
 
                     message.channel.send(embed);
 
-                })
+                }).catch(e => {message.channel.send('I could not find that player in the API. Check spelling and name history.')});
             })
         } else {
 
@@ -83,7 +83,7 @@ module.exports = {
                     .addField('Total Wins:', player.stats.bedwars.wins, true)
 
                 message.channel.send(embed);
-            })
+            }).catch(e => {message.channel.send('I could not find that player in the API. Check spelling and name history.')});
         }
 
     }
